@@ -19,6 +19,8 @@ def find_prime_factors(n):
         while n % i == 0:
             L.append(i)
             n = n / i
+    if n != 1:
+        L.append(n)
     return L
 
 
