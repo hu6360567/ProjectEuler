@@ -65,35 +65,35 @@ def processMatrix():
     return matrix
 
 
-def getAdjacentNumber(martix):
+def getAdjacentNumber(matrix):
     numbersInARow = []
     for x in range(20):
         for y in range(20):
             try:
                 # Horizontal
-                numbersInARow.append(tuple([martix[x][y], martix[x][y + 1],
-                                            martix[x][y + 2], martix[x][y + 3]]
+                numbersInARow.append(tuple([matrix[x][y], matrix[x][y + 1],
+                                            matrix[x][y + 2], matrix[x][y + 3]]
                                            ))
             except Exception, e:
                 pass
             try:
                 # Vertical
-                numbersInARow.append(tuple([martix[x][y], martix[x + 1][y],
-                                            martix[x + 2][y], martix[x + 3][y]]
+                numbersInARow.append(tuple([matrix[x][y], matrix[x + 1][y],
+                                            matrix[x + 2][y], matrix[x + 3][y]]
                                            ))
             except Exception, e:
                 pass
             try:
                 # Diagonally
-                numbersInARow.append(tuple([martix[x][y], martix[x + 1][y + 1],
-                                            martix[x + 2][y + 2], martix[x + 3][y + 3]]
+                numbersInARow.append(tuple([matrix[x][y], matrix[x + 1][y + 1],
+                                            matrix[x + 2][y + 2], matrix[x + 3][y + 3]]
                                            ))
             except Exception, e:
                 pass
             try:
                 # Diagonally
-                numbersInARow.append(tuple([martix[x][y], martix[x - 1][y + 1],
-                                            martix[x - 2][y + 2], martix[x - 3][y + 3]]
+                numbersInARow.append(tuple([matrix[x][y], matrix[x - 1][y + 1],
+                                            matrix[x - 2][y + 2], matrix[x - 3][y + 3]]
                                            ))
             except Exception, e:
                 pass
